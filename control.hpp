@@ -8,13 +8,13 @@
 
 #ifndef control_hpp
 #define control_hpp
-#include <iostream>
-#include <string>
+#include "vec.hpp"
 #include <memory>
 #include <map>
-#include "vec.hpp"
+//#include <string>
+
 class control{
-    std::map<std::string, vec*> lst;
+    std::map<std::string, std::unique_ptr<vec> > lst;
 public:
     control();
     void subtract(std::string vector1, std::string vector2);
@@ -24,7 +24,7 @@ public:
     void add(std::string vector1, std::string vector2); //implement a way to add infinite vectors after
     void create(int x, int y, int z, std::string name);
     void multiply(std::string vector1, int k);
-    string view(std::string vector1);
+    void view(std::string vector1);
     void quit();
     void help();
 };

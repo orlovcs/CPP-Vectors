@@ -6,9 +6,11 @@
 //  Copyright © 2017 ニキータオルロフ. All rights reserved.
 //
 
-#include <iostream>
-#include <string>
+
 #include "control.hpp"
+//#include <iostream>
+//#include <string>
+
 int main(int argc, const char * argv[]) {
     control cntrl;
 
@@ -25,7 +27,8 @@ int main(int argc, const char * argv[]) {
                 std::cout << "Enter Name" << std::endl;
                 std::cin >> name;
                 cntrl.create(x,y,z,name);
-                std::cout << "Created " << name << ": "<< cntrl.view(name) << std::endl;
+                std::cout << "Created " << name << ": ";
+                cntrl.view(name);
             }
             else if(cmd=="multiply"){
                 std::string vec1;
@@ -71,6 +74,7 @@ int main(int argc, const char * argv[]) {
             }
             else if(cmd=="view"){
                 std::string vec1;
+                std::cin >> vec1;
                 cntrl.view(vec1);
             }
             else if(cmd=="help"){
