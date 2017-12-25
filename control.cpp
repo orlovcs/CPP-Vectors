@@ -34,13 +34,21 @@ void control::multiply(std::string vector1, int k){
     *(lst[vector1]) *= k;
 }
 void control::view(std::string vector1){
-    std::cout << vector1 << ": ";
-    std::cout << (lst[vector1])->getX() << std::endl;
+    std::cout << (lst[vector1])->getX()<< ", " << (lst[vector1])->getY() << ", " << (lst[vector1])->getZ() << std::endl;
    // std::cout << *(lst[vector1]);
 }
 void control::quit(){
     exit(0);
     
+}
+void control::list(){
+    for( const auto& l : lst )
+    {
+        std::cout << "Name: " << std::endl;
+        std::cout << l.first << std::endl;
+        std::cout << "Values: ";
+        view(l.first);
+    }
 }
 void control::help(){
     
