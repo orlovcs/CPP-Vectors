@@ -17,16 +17,15 @@ int main(int argc, const char * argv[]) {
             std::string cmd;
             std::cin >> cmd;
             
-            if(cmd=="q"){
-                exit(0);
-            }
-            else if(cmd=="create"){
+            if(cmd=="create"){
                 int x,y,z;
+                std::cout << "Enter X,Y,Z" << std::endl;
                 std::cin >> x >> y >> z;
                 std::string name;
+                std::cout << "Enter Name" << std::endl;
                 std::cin >> name;
                 cntrl.create(x,y,z,name);
-                
+                std::cout << "Created " << name << ": "<< cntrl.view(name) << std::endl;
             }
             else if(cmd=="multiply"){
                 std::string vec1;
@@ -70,9 +69,15 @@ int main(int argc, const char * argv[]) {
                 std::cin >> vec2;
                 cntrl.cross(vec1, vec2);
             }
-            else if(cmd=="h"){
-                cntrl.help();            }
-            else if(cmd=="q"){
+            else if(cmd=="view"){
+                std::string vec1;
+                cntrl.view(vec1);
+            }
+            else if(cmd=="help"){
+                cntrl.help();
+                
+            }
+            else if(cmd=="quit"){
                 cntrl.quit();
             }
             else{
