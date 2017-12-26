@@ -16,6 +16,7 @@ int main(int argc, const char * argv[]) {
 
     while(true){
         while(std::cin){
+            std::cout << "Enter command or help for more information" << std::endl;
             std::string cmd;
             std::cin >> cmd;
             
@@ -34,7 +35,7 @@ int main(int argc, const char * argv[]) {
             }
             else if(cmd=="multiply"){
                 std::string vec1;
-                std::string vec2;s
+                std::string vec2;
                 std::cout << "Enter first vector name" << std::endl;
                 std::cin >> vec1;
                 std::cout << "Enter second vector name" << std::endl;

@@ -1,0 +1,12 @@
+create - creates a vec
+add -  adds to vecs
+subtract - subtract two vecs
+k multiply - multiplies a vec by a scalar k
+multiply- multiplies two vecs
+list - list all vecs
+view - views a vec
+cross - cross product onto two vecs
+dot - dot product into two vecs
+help - opens this again
+quit - exits program
+
