@@ -33,6 +33,13 @@ public:
         this->z = (this->x * rhs.y) - (this->y * rhs.x);
         return *this;
     }
+    void dot(const vec rhs){
+        int dx = (this->x * rhs.x);
+        int dy = (this->y  * rhs.y);
+        int dz = (this->z * rhs.z);
+        std::cout << "Dot product is: ";
+        std::cout << dx + dy + dz << std::endl;
+    }
     vec& operator*=(const vec& rhs){
         this->x = this->x * rhs.x;
         this->y = this->y * rhs.y;

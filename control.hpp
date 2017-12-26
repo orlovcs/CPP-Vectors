@@ -9,6 +9,7 @@
 #ifndef control_hpp
 #define control_hpp
 #include "vec.hpp"
+#include <fstream>
 #include <memory>
 #include <map>
 //#include <string>
@@ -28,6 +29,9 @@ public:
     void list();
     void quit();
     void help();
+    ~control(){
+        lst.clear();
+    }
 };
 
 

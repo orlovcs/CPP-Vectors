@@ -22,7 +22,7 @@ void control::cross(std::string vector1, std::string vector2){
     (lst[vector1])->cross(*(lst[vector2]));
 }
 void control::dot(std::string vector1, std::string vector2){
-    
+    (lst[vector1])->dot(*(lst[vector2]));
 }
 void control::add(std::string vector1, std::string vector2){
    *(lst[vector1]) += *(lst[vector2]);
@@ -51,5 +51,11 @@ void control::list(){
     }
 }
 void control::help(){
+    
+    std::ifstream file {"help.txt"};
+    std::string s;
+    while (getline(file, s)) {
+    std::cout << s << std::endl;
+    }
     
 }
