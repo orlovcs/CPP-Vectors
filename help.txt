@@ -1,7 +1,7 @@
 create - creates a vec
 add -  adds to vecs
 subtract - subtract two vecs
-k multiply - multiplies a vec by a scalar k
+k_multiply - multiplies a vec by a scalar k
 multiply- multiplies two vecs
 list - list all vecs
 view - views a vec

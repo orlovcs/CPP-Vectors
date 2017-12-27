@@ -42,7 +42,7 @@ int main(int argc, const char * argv[]) {
                 std::cin >> vec2;
                 cntrl.multiply(vec1, vec2);
             }
-            else if(cmd=="k multiply"){
+            else if(cmd=="k_multiply"){
                 std::string vec1;
                 int k;
                 std::cout << "Enter first name" << std::endl;
@@ -93,6 +93,12 @@ int main(int argc, const char * argv[]) {
                 std::cin >> vec1;
                 std::cout << "Values: ";
                 cntrl.view(vec1);
+            }
+            else if(cmd=="delete"){
+                std::cout << "Enter Name" << std::endl;
+                std::string vec1;
+                std::cin >> vec1;
+                cntrl.vdelete(vec1);
             }
             else if(cmd=="help"){ //read from file
                 cntrl.help();

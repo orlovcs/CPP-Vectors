@@ -34,10 +34,13 @@ void control::multiply(std::string vector1, int k){
     *(lst[vector1]) *= k;
 }
 void control::view(std::string vector1){
-    std::cout << (lst[vector1])->getX()<< ", " << (lst[vector1])->getY() << ", " << (lst[vector1])->getZ() << std::endl;
-   // std::cout << *(lst[vector1]);
+   std::cout << *(lst[vector1]);
+}
+void control::vdelete(std::string vector1){
+    lst.erase(vector1);
 }
 void control::quit(){
+    std::cout << "Bye!" << std::endl;
     exit(0);
     
 }

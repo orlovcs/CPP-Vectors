@@ -26,6 +26,7 @@ public:
     void create(int x, int y, int z, std::string name);
     void multiply(std::string vector1, int k);
     void view(std::string vector1);
+    void vdelete(std::string vector1);
     void list();
     void quit();
     void help();
