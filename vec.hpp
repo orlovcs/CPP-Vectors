@@ -10,12 +10,9 @@
 #define vec_hpp
 #include <iostream>
 #include <string>
+#include "vecImpl.cpp"
 
-struct vecImpl{
-  int x,y,z;
-  vecImpl(int x, int y, int z);
-  vecImpl(vecImpl &&other);
-};
+class vecImpl;
 
 class vec{
     const std::unique_ptr<vecImpl> i;

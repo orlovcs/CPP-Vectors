@@ -8,11 +8,11 @@
 
 #include "vec.hpp"
 
+
+
 vec::vec(int x, int y, int z):i{std::make_unique<vecImpl>(x, y, z)} {}
 
-vecImpl::vecImpl (vecImpl&& other): x{other.x}, y{other.y}, z{other.z}{}
 
-vecImpl::vecImpl(int x, int y, int z): x{x}, y{y}, z{z} {}
 
 vec::vec(const vec& other):
 i{std::make_unique<vecImpl>

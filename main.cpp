@@ -20,6 +20,8 @@ int main(int argc, const char * argv[]) {
             std::string cmd;
             std::cin >> cmd;
             
+            
+            
             if(cmd=="create"){ //move all this to cntrl
                 int x,y,z;
                 std::cout << "Enter X,Y,Z Coordinates (JUST NUMBERS)" << std::endl;
@@ -33,6 +35,7 @@ int main(int argc, const char * argv[]) {
                 std::cout << "Values: ";
                 cntrl.view(name);
             }
+            
             else if(cmd=="multiply"){
                 std::string vec1;
                 std::string vec2;
@@ -60,6 +63,7 @@ int main(int argc, const char * argv[]) {
                 std::cin >> vec2;
                 cntrl.subtract(vec1, vec2);
             }
+            
             else if(cmd=="add"){
                 std::string vec1;
                 std::string vec2;
@@ -87,6 +91,7 @@ int main(int argc, const char * argv[]) {
                 std::cin >> vec2;
                 cntrl.cross(vec1, vec2);
             }
+            
             else if(cmd=="view"){
                 std::cout << "Enter Name" << std::endl;
                 std::string vec1;
@@ -104,16 +109,21 @@ int main(int argc, const char * argv[]) {
                 cntrl.help();
                 
             }
+            
             else if(cmd=="list"){
                 cntrl.list();
             }
             else if(cmd=="quit"){
                 cntrl.quit();
             }
+            
+            
             else{
                 std::cout << "Invalid Command" << std::endl;
                 std::cout << "Try Again" << std::endl;
             }
+             
+
             
         }
         
